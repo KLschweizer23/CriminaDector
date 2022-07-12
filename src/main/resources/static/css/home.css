@@ -1,5 +1,10 @@
+@media (max-width:525px) {
+    h2{
+        font-size:100%
+    }
+}
 h2{
-    color:white
+    color:white;
 }
 
 body{
@@ -25,5 +30,8 @@ td.profileimg{
 }
 p.lastseen{
     color:white;
-
+    font-size: 20px;
+}
+img.recentact{
+    width:25px;margin:5px;float:left
 }
