@@ -14,6 +14,10 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public @Data class Criminal extends Person{
     
+    public Criminal(){
+        super(null,null,null,null,null);
+    }
+
     public Criminal(Long id, String name, String sex, Long age, String role, String description, String lastSeen, String picturePath){
         super(id, name, sex, age, role);
         this.description = description;
