@@ -1,4 +1,4 @@
-package com.criminaldetector.criminadector.objects.person.abstractObjects;
+package com.criminaldetector.criminadector.objects.person.extensibleClass;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
