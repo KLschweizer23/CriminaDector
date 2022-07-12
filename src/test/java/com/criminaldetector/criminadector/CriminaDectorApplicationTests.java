@@ -8,6 +8,7 @@ class CriminaDectorApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 	}
 
 }
