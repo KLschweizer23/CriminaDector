@@ -11,6 +11,14 @@ import lombok.Data;
 @MappedSuperclass
 public @Data class Person {
     
+    public Person(Long id, String name, String sex, Long age, String role) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.age = age;
+        this.role = role;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
