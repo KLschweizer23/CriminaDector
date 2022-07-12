@@ -18,4 +18,13 @@ public class AppController {
         return mv;
     }
 
+    @GetMapping("/dashboard")
+    public ModelAndView dashPage(Model model){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("dashboard.html");
+        
+        model.addAttribute("title", "Dashboard");
+
+        return mv;
+    }
 }

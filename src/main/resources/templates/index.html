@@ -5,9 +5,56 @@
 </head>
     
 <body>
-    deeno
-    Rene Ceasar Obeja
-    Ken Lloyd Billones
+    <nav th:replace="/fragments/navbar :: navigation"></nav>
+    <div class="bg-secondary maincontainer">
+        <div class="row" style = "margin: 10px;">
+            <div class="col-8 divider">
+                <h2>Recent Criminals Last Seen</h2>
+                <table class ="tblhome">
+                    <tr class = "trhome" rowspan = "2">
+                        <td class = "profileimg">
+                            <img src="/img/crimina.png" style="width: 100px;margin:15px;">
+                        </td>
+                        <td>
+                            <table>
+                            <tr>
+                                <td><p class="lastseen">Name:</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="lastseen">Last seen:</p></td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-4">
+                <h2>Recent Crime Activities</h2>
+                <table class = "tblhome">
+                    <tr class = "trhome">
+                        <td>
+                            <table class = "tblhome">
+                                <tr valign="middle">
+                                    <img class = "recentact" src = "/img/location_icon.png">
+                                    <p class = "lastseen">Barangay: </p>
+                                </tr>
+                                <tr>
+                                    <img class = "recentact" src = "/img/time_icon.png">
+                                    <p class = "lastseen">Time: </p>
+                                </tr>
+                                <tr>
+                                    <img class = "recentact" src = "/img/crime_icon.png">
+                                    <p class = "lastseen">Crime: </p>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
