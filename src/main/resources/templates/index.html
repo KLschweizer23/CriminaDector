@@ -12,16 +12,20 @@
                 <h2>Recent Criminals Last Seen</h2>
                 <table class ="tblhome">
                     <tr class = "trhome" rowspan = "2">
-                        <td class = "profileimg">
-                            <img src="/img/crimina.png" style="width: 100px;margin:15px;">
+                        <td class="profileimg">
+                            <a th:href="@{/profile}">
+                                <img src="/img/crimina.png" style="width: 100px;margin:15px;border:1px solid black">
+                            </a>
                         </td>
                         <td>
                             <table>
                             <tr>
-                                <td><p class="lastseen">Name:</p></td>
+                                <td><p class="lastseen">Name: </p></td>
+                                <td><p class="lastseen">John Doe</p></td>
                             </tr>
                             <tr>
-                                <td><p class="lastseen">Last seen:</p></td>
+                                <td><p class="lastseen">Last seen: </p></td>
+                                <td><p class="lastseen">January 1, 2020 | 14:46</p></td>
                             </tr>
                         </table>
                         </td>
@@ -36,16 +40,31 @@
                         <td>
                             <table class = "tblhome">
                                 <tr valign="middle">
-                                    <img class = "recentact" src = "/img/location_icon.png">
-                                    <p class = "lastseen">Barangay: </p>
-                                </tr>
-                                <tr>
-                                    <img class = "recentact" src = "/img/time_icon.png">
-                                    <p class = "lastseen">Time: </p>
-                                </tr>
-                                <tr>
-                                    <img class = "recentact" src = "/img/crime_icon.png">
-                                    <p class = "lastseen">Crime: </p>
+                                    <td style="width:35%;">
+                                        <img class="recentact" src="/img/location_icon.png">
+                                        <p class="lastseen">Barangay: </p>
+                                    </td>
+                                    <td>
+                                        <p class="lastseen">Mankilam</p>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="recentact" src="/img/time_icon.png">
+                                            <p class="lastseen">Time: </p>
+                                        </td>
+                                        <td>
+                                            <p class="lastseen">11:50 AM</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="recentact" src="/img/crime_icon.png">
+                                            <p class="lastseen">Crime: </p>
+                                        </td>
+                                        <td>
+                                            <p class="lastseen">Robbery</p>
+                                        </td>
                                 </tr>
                             </table>
                         </td>

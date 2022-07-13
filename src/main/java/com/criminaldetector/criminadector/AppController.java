@@ -13,7 +13,7 @@ public class AppController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("index.html");
         
-        model.addAttribute("title", "Home");
+        model.addAttribute("title", "CriminaDector | Home");
 
         return mv;
     }
@@ -23,7 +23,17 @@ public class AppController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("dashboard.html");
         
-        model.addAttribute("title", "Dashboard");
+        model.addAttribute("title", "CriminaDector | Dashboard");
+
+        return mv;
+    }
+
+    @GetMapping("/profile")
+    public ModelAndView profilePage(Model model){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("profile.html");
+        
+        model.addAttribute("title", "CriminaDector | Profile");
 
         return mv;
     }
