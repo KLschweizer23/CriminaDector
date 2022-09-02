@@ -28,10 +28,16 @@ tr.trhome{
 td.profileimg{
     width:20%
 }
-p.lastseen{
+p{
     color:white;
-    font-size: 20px;
+    font-size: 125%;
 }
 img.recentact{
     width:25px;margin:5px;float:left
+}
+img.profilepicture{
+    width: 100px;margin:15px;border:1px solid black;
+}
+img.profilepage{
+    width: 100%;border:1px solid black
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head th:replace="/fragments/head :: head">
+</head>
+    
+<body style = "background-color:rgb(52, 63, 75);">
+    <nav th:replace="/fragments/navbar :: navigation"></nav>
+    
+    <div class="bg-secondary maincontainer row" style = "padding:1%">
+        <div class = "col-8">
+            <h2>Profile</h2>
+            <hr color=white>
+            <p>Name: John Doe</p>
+            <p>Sex: Male</p>
+            <p>Age: 56 years old</p>
+            <p>Violation: Robbery</p>
+            <p>Recent sightings: </p>
+            <p><img class="recentact" src="/img/location_icon.png">Barangay Apokon | 16:49</p>
+            <p><img class="recentact" src="/img/location_icon.png">Barangay Magugpo | 05:25</p>
+        </div>
+        <div class = "col-4 align-item-center"><img src = "/img/crimina.png" class = "profilepage"/>
+        </div>
+    </div>
+</body>
+</html>
