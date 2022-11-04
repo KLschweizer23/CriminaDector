@@ -11,10 +11,10 @@
         <div class = "col-8">
             <h2>Profile</h2>
             <hr color=white>
-            <p>Name: John Doe</p>
-            <p>Sex: Male</p>
-            <p>Age: 56 years old</p>
-            <p>Violation: Robbery</p>
+            <p>Name: <span th:text="${criminal.getName}"></span></p>
+            <p>Sex: <span th:text="${criminal.getSex}"></span></p>
+            <p>Age:  <span th:text="${criminal.getAge}"></span> years old</p>
+            <p>Violation:  <span th:text="${criminal.getDescription}"></span></p>
             <p>Recent sightings: </p>
             <p><img class="recentact" src="/img/location_icon.png">Barangay Apokon | 16:49</p>
             <p><img class="recentact" src="/img/location_icon.png">Barangay Magugpo | 05:25</p>
