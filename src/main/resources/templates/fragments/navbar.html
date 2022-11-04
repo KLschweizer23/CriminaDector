@@ -9,7 +9,8 @@
     <div class="ml-auto">
         <a th:href="@{/dashboard}"><button class="btn btn-secondary">Dashboard</button></a>
         <th:block th:switch="${#request.userPrincipal}">
-            <button th:case="null" class="btn btn-primary">Login</button>
+            <button th:case="null" class="btn btn-primary">
+                <a th:href="@{/login}" style = "color:white;">Login</a></button>
             <button th:case="*" class="btn btn-primary">Logout</button>
         </th:block>
     </div>
