@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.criminaldetector.criminadector.objects.Criminal;
 import com.criminaldetector.criminadector.repositories.CriminalRepository;
-import com.criminaldetector.criminadector.objects.person.Criminal;
 
 @RestController
 public class AppController {
