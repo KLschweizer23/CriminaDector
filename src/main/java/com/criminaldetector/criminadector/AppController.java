@@ -49,4 +49,14 @@ public class AppController {
 
         return mv;
     }
+
+    @GetMapping("/login")
+    public ModelAndView loginPage(Model model){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("login.html");
+        
+        model.addAttribute("title", "CriminaDector | Login");
+
+        return mv;
+    }
 }
