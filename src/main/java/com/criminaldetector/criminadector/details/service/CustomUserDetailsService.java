@@ -5,25 +5,25 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.criminaldetector.criminadector.objects.Person;
+import com.criminaldetector.criminadector.details.CustomUserDetails;
 import com.criminaldetector.criminadector.objects.Police;
-import com.criminaldetector.criminadector.repositories.PersonRepository;
+import com.criminaldetector.criminadector.repositories.PoliceRepository;
 
 public class CustomUserDetailsService implements UserDetailsService{
     
     @Autowired
-    private PersonRepository personRepository;
+    private PoliceRepository policeRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String badge) throws UsernameNotFoundException {
 
-        Police police = personRepository.findByEmail(email);
+        Police police = policeRepository.findByBadgeNumber(badge);
         
-        if(user == null){
+        if(police == null){
             throw new UsernameNotFoundException("User not found!");
         }
 
-        return new CustomUserDetails(user);
+        return new CustomUserDetails(police.getPerson(), police);
 
     }
 

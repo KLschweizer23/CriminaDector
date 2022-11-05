@@ -6,4 +6,6 @@ import com.criminaldetector.criminadector.objects.Police;
 
 public interface PoliceRepository extends JpaRepository<Police, Long>{
     
+    Police findByBadgeNumber(String badgeNumber);
+
 }

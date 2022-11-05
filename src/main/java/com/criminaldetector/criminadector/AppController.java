@@ -42,7 +42,7 @@ public class AppController {
         
         Criminal currentCriminal = criminalRepository.findById(1L).get();
 
-        System.out.println(currentCriminal.getName());
+        System.out.println(currentCriminal.getPerson().getName());
 
         model.addAttribute("title", "CriminaDector | Profile");
         model.addAttribute("criminal", currentCriminal);
