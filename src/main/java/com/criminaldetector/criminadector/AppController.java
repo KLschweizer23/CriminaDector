@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.criminaldetector.criminadector.objects.Criminal;
+import com.criminaldetector.criminadector.objects.Person;
+import com.criminaldetector.criminadector.objects.Police;
 import com.criminaldetector.criminadector.repositories.CriminalRepository;
 
 @RestController
@@ -51,11 +53,13 @@ public class AppController {
     }
 
     @GetMapping("/login")
-    public ModelAndView loginPage(Model model){
+    public ModelAndView loginPage(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("login.html");
         
-        model.addAttribute("title", "CriminaDector | Login");
+        mv.addObject("title", "CriminaDector | Login");
+        mv.addObject("person", new Person());
+        mv.addObject("police", new Police());
 
         return mv;
     }
