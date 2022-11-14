@@ -3,8 +3,13 @@
 
 <head th:replace="/fragments/head :: head">
 </head>
-    
 <body style = "background-color:rgb(52, 63, 75);">
     <nav th:replace="/fragments/navbar :: navigation"></nav>
+    <button id="videoStarter" class="btn btn-success">Start</button>
+    <div id="container" class="video-container">
+        <video class="border" id="videoInput" width="720" height="550" muted autoplay>
+    </div>
+    <script defer async th:src="@{js/face-api.min.js}"></script>
+    <script defer async th:src="@{js/script.js}"></script>
 </body>
 </html>
