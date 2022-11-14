@@ -39,11 +39,6 @@ public class CustomUserDetails extends AbstractDetails{
     }
 
     @Override
-    public Long getAge() {
-        return person.getAge();
-    }
-
-    @Override
     public String getRole() {
         return person.getRole();
     }
@@ -52,7 +47,5 @@ public class CustomUserDetails extends AbstractDetails{
     public Long getId() {
         return person.getId();
     }
-
-    
     
 }

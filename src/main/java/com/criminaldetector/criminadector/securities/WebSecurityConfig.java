@@ -46,7 +46,7 @@ public class WebSecurityConfig {
         .and()
         .formLogin()
             .loginPage("/login")
-            .usernameParameter("badge")
+            .usernameParameter("badgeNumber")
             .failureForwardUrl("/login-fail")
             .defaultSuccessUrl("/dashboard")
             .permitAll()

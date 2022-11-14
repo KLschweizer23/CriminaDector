@@ -18,7 +18,7 @@ public class CustomUserDetailsService implements UserDetailsService{
     public UserDetails loadUserByUsername(String badge) throws UsernameNotFoundException {
 
         Police police = policeRepository.findByBadgeNumber(badge);
-        
+
         if(police == null){
             throw new UsernameNotFoundException("User not found!");
         }

@@ -38,7 +38,6 @@ public abstract class AbstractDetails implements UserDetails{
 
     public abstract String getName();
     public abstract String getSex();
-    public abstract Long getAge();
     public abstract String getRole();
     public abstract Long getId();
     

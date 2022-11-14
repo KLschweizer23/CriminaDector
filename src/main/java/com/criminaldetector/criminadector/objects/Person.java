@@ -27,8 +27,11 @@ public class Person {
     @Column(nullable = false, length = 255)
     private String sex;
 
-    @Column(nullable = false)
-    private Long age;
+    @Column(nullable = false, length = 255)
+    private String address;
+
+    @Column(nullable = false, length = 255)
+    private String phoneNumber;
 
     @Column(nullable = false, length = 255)
     private String role;

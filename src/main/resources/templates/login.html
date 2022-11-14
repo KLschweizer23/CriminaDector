@@ -15,54 +15,50 @@
         <div class = "row">
             <div class = "col-sm-12 col-md-6" style="padding:3%; background-color: gray;">
                 <center>
-                <h1 style="text-align:center;color:white;">LOGIN</h1>
-                <img src="/img/profile_logo.png" style="border-radius:100%; width:40%;margin:4%">
-                <form>
-                    <label for="loginemail"><b>Badge Number</b></label>
-                    <input type="text" placeholder="Badge Number" name="loginbadge" required
-                    style = "width:80%">
-                    <br>
-                    <label for="psw"><b>Password</b></label><br>
-                    <input type="password" placeholder="Enter Password" name="psw" required style = "width:80%">
-                    <br><br>
-                    <button class="btn btn-secondary" type="submit">Login</button>
+                    <h1 style="text-align:center;color:white;">LOGIN</h1>
+                    <img src="/img/profile_logo.png" style="border-radius:100%; width:40%;margin:4%">
+                    <form th:action="@{/login}" method="POST" th:object="${loginPolice}">
+                        <label for="loginbadge"><b>Badge Number</b></label>
+                        <input th:field="*{badgeNumber}" type="text" placeholder="Badge Number" name="loginbadge" required
+                        style = "width:80%">
+                        <br>
+                        <label for="psw"><b>Password</b></label><br>
+                        <input th:field="*{password}" type="password" placeholder="Enter Password" name="psw" required style = "width:80%">
+                        <br><br>
+                        <button class="btn btn-secondary" type="submit">Login</button>
+                    </form>
                 </center>
-                </form>
             </div>
 
             <div class = " col-sm-12 col-md-6" style="padding:2%; background-color: gray;">
                 <h1 style="text-align:center;color:white;">REGISTER</h1>
-                <form th:action="@{/login}" method="POST"><center>
-                    <label for="firstname"><b>First Name</b></label><br>
-                    <input type="text" placeholder="Enter First Name" name="firstname" required
-                    style = "width:80%">
-                    <br>
-                    <label for="lastname"><b>Last Name</b></label><br>
-                    <input type="text" placeholder="Enter Last Name" name="lastname" required
+                <form th:action="@{/register}" method="POST"><center>
+                    <label for="fullname"><b>Full Name</b></label><br>
+                    <input th:field="${person.name}" type="text" placeholder="Enter Full Name" name="fullname" required
                     style = "width:80%">
                     <br>
                     <label for="address"><b>Address</b></label><br>
-                    <input type="text" placeholder="Enter Address" name="address" required
+                    <input th:field="${person.address}" type="text" placeholder="Enter Address" name="address" required
                     style = "width:80%">
                     <br>
                     <label><b>Sex: </b></label>
-                    <input type="radio" name="sex" value = "male" required>
+                    <input th:field="${person.sex}" type="radio" name="sex" value = "male" required>
                     <label for="male">Male</label>
-                    <input type="radio" name="sex" value = "female" required>
+                    <input th:field="${person.sex}" type="radio" name="sex" value = "female" required>
                     <label for="female">Female</label>
                     <br>
                     <label for="phonenum"><b>Phone Number</b></label><br>
-                    <input type="text" placeholder="Enter Phone Number" name="phonenum" required
+                    <input th:field="${person.phoneNumber}" type="text" placeholder="Enter Phone Number" name="phonenum" required
                     style = "width:80%">
                     <br>
                     <label for="badgenum"><b>Badge Number</b></label><br>
-                    <input type="text" placeholder="Enter Badge Number" name="regbadge" required
+                    <input th:field="${police.badgeNumber}" type="text" placeholder="Enter Badge Number" name="regbadge" required
                     style = "width:80%">
                     <br>
                     <label for="psw"><b>Password</b></label><br>
-                    <input type="password" placeholder="Enter Password" name="psw" required style = "width:80%">
+                    <input th:field="${police.password}" type="password" placeholder="Enter Password" name="psw" required style = "width:80%">
                     <br><br>
-                    <button class= "btn btn-primary">Register</button>
+                    <button type="submit" class= "btn btn-primary">Register</button>
                 
                 </form></center>
             </div>

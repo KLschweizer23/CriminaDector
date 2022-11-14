@@ -10,8 +10,11 @@
         <a th:href="@{/dashboard}"><button class="btn btn-secondary">Dashboard</button></a>
         <th:block th:switch="${#request.userPrincipal}">
             <button th:case="null" class="btn btn-primary">
-                <a th:href="@{/login}" style = "color:white;">Login</a></button>
-            <button th:case="*" class="btn btn-primary">Logout</button>
+                <a th:href="@{/login}" style = "color:white;">Login</a>
+            </button>
+            <form style="display: inline;" th:case="*" th:action="@{/logout}" method="POST">
+                <button type="submit" class="btn btn-primary">Logout</button>
+            </form>
         </th:block>
     </div>
   </nav>
